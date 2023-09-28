@@ -44,11 +44,9 @@ class TextGlitch {
     setTexts([text, ...alt]) {
         this._text = text;
         this._textAlt = alt;
-        this._updateText(); // Chame a função para atualizar o texto quando os textos são definidos
+        this._updateText(); 
     }
 
-    // private:
-    // .....................................................................
     _frame() {
         this._glitch();
         setTimeout(this._unglitch, 50 + Math.random() * 200);
@@ -63,7 +61,7 @@ class TextGlitch {
 
     _unglitch() {
         this._removeClipCSS();
-        this._updateText(); // Chame a função para atualizar o texto quando o efeito é desligado
+        this._updateText(); 
         this._root.classList.remove("TextGlitch-blended");
     }
 
@@ -110,13 +108,14 @@ class TextGlitch {
 
    // Função para atualizar o texto com base no idioma selecionado
    _updateText() {
+
     // Crie um objeto de tradução que mapeia chaves de tradução para os textos correspondentes em diferentes idiomas
     const translations = {
         "hello-friend": {
-            english: "$hello friend! My name is Luan Araujo and this is my portfolio.",
+            english: "$Hello friend! My name is Luan Araujo and this is my portfolio.",
             portuguese: "$Olá amigo(a)! Meu nome é Luan Araujo e este é o meu portfólio."
         },
-        // Adicione mais chaves de tradução conforme necessário para outros elementos
+        
     };
 
     // Atualize o texto com base no idioma selecionado e na chave de tradução
@@ -153,13 +152,6 @@ class MeusProjetos {
             "¨µ31)*{&",
             "§#+:|*{&",
         ]);
-
-        // this.setTexts( [
-        // 	"hello world !",
-        // 	"HELLO WORLD ?",
-        // 	"µ3770 3027q ?",
-        // 	"µ311p MQ51b ?",
-        // ] );
     }
 
     on() {
@@ -177,11 +169,9 @@ class MeusProjetos {
     setTexts([text, ...alt]) {
         this._text = text;
         this._textAlt = alt;
-        this._updateText(); // Chame a função para atualizar o texto quando os textos são definidos
+        this._updateText(); 
     }
 
-    // private:
-    // .....................................................................
     _frame() {
         this._glitch();
         setTimeout(this._unglitch, 50 + Math.random() * 200);
@@ -196,7 +186,7 @@ class MeusProjetos {
 
     _unglitch() {
         this._removeClipCSS();
-        this._updateText(); // Chame a função para atualizar o texto quando o efeito é desligado
+        this._updateText(); 
         this._root.classList.remove("MeusProjetos-blended");
     }
 
@@ -274,7 +264,7 @@ class TranslationHandler {
         this._text = "";
         Object.seal(this);
 
-        // Chame a função para atualizar o texto com base no idioma selecionado
+        
         this._updateText();
     }
 
