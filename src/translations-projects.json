@@ -1,0 +1,54 @@
+{
+    
+    "projects": {
+      "title": {
+        "en": "Projects",
+        "pt": "Projetos"
+      },
+      "helpcar": {
+        "en": "HelpCar Baterias Website",
+        "pt": "Site HelpCar Baterias"
+      },
+      "helpcar_description": {
+        "en": "A contact website for HelpCar Baterias company, using HTML, CSS, and JavaScript.",
+        "pt": "Um site de contato para a empresa HelpCar Baterias, usando HTML, CSS e JavaScript."
+      },
+      "assinatura": {
+        "en": "Signature Processor",
+        "pt": "Tratador de Assinaturas"
+      },
+      "assinatura_descricao": {
+        "en": "A signature processing program using Python and its libraries: OpenCV, Streamlit, Numpy, Matplotlib and OS. In it is possible to load a image, select a folder and also the level of filtering desired. After that the program converts the image to a grayscale format, apply the binary limiar filter, also a Gaussian smoothing filter and a median filter",
+        "pt": "Projeto de um programa de tratamento de assinaturas eletrônicas, usando Python e suas bibliotecas: OpenCV, Streamlit, Numpy, Matplotlib e OS. Nele é possível carregar a imagem, selecionar a pasta de destino e então selecionar o nível de filtro desejado. Ao selecionar o valor, o programa converte a imagem para uma escala cinza, aplica o filtro limiar binário, um filtro de suavização Gaussiano e o de mediana."
+      },
+      "table": {
+        "en": "Table Processor",
+        "pt": "Tratador de Tabelas"
+      },
+      "table_description": {
+        "en": "A program for processing tables of exam values using Python and its libraries: Pandas, Streamlit, Re, Openpyxl, and Base64. In it is possible to load a excel table, select the columns you want to use in the process, and after that, the data is treated into a new table wich is exported into a CSV file. ",
+        "pt": "Projeto de um programa de tratamento de tabelas de valores de exames, usando Python e suas bibliotecas: Pandas, Streamlit, Re, Openpyxl e Base64. Nele é possível carregar a tabela em excel, selecionar as colunas dos códigos de procedimento e valor, que você quer usar no tratamento, que serão adicionadas na tabela base (que está pronta para importação). Após a seleção das colunas, os dados são tratados e salvos em uma nova tabela com base no modelo que o programa usa de base. E então, o programa gera o download da tabela tratada, em csv."
+      },
+      "menu": {
+        "en": "Digital Menu",
+        "pt": "Cardápio Digital"
+      },
+      "menu_description": {
+        "en": "A personal project for a simple digital menu prototype using Java Spring, Spring MVC, React, TypeScript, and PostgreSQL. For the fronted, I used the following tecnologies: React, TypeScript, and React Query. This menu allows the user to include new products and delete the existing ones. In my Linkedin profile I uploaded a video showing the program",
+        "pt": "Projeto pessoal de um simples protótipo de cardápio digital utilizando as seguintes tecnologias no backend: Java Spring e Spring MVC para criação do servidor, Spring Data JPA para manipulação e persistência de dados, Lombok e o banco de dados PostgreSQL. No frontend foram utilizadas as tecnologias: React, Typescript e React Query. Esse cardápio permite incluir novos produtos e fazer a exclusão do cardápio. No meu Linkedin eu postei um vídeo mostrando o funcionamento."
+      },
+
+      "about": {
+        "text": {
+            "en": "Currently, I am studying Analysis and Systems Development, and I also studied Computer Science (4 years) at UNIFIL. Today, in college and on my own, I am delving deeper into the development field, always seeking more knowledge, eager to put everything into practice, and very willing to learn whatever is necessary to start and grow in this field.",
+            "pt": "Atualmente, estou cursando Análise e Desenvolvimento de Sistemas, e cursei também Ciência da Computação (4 anos) na UNIFIL. Hoje na faculdade e por conta, estou me aprofundando cada vez mais na área de desenvolvimento, buscando sempre mais conhecimento, com muita vontade de colocar tudo em prática e também com muita disposição para aprender o que for necessário para iniciar e crescer muito nessa área."
+        },
+        "social": {
+          "en": "My social media links!",
+          "pt": "Minhas redes sociais!"
+        }
+      }
+    }
+
+  }
+  
