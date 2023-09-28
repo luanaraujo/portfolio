@@ -1,7 +1,6 @@
 body {
     height: 100%;
 	margin: 0;
-    display: flex;
 	flex-direction: column;
     overflow: hidden;
     background-color: #222;
@@ -110,12 +109,13 @@ header {
 	height: auto;
     justify-content: center; 
     align-items: center; 
-    margin-top: 20px;
+    margin: auto;
     padding-bottom: 20px;
     
 }
 /* Minha foto */	
 .profile-image {
+    margin-top: 40px;
     width: 160px;
     height: auto;
 }
@@ -181,17 +181,99 @@ header {
 	padding: 10px;
   }
 
-  #projetos{
+  .MeusProjetos {
     order: 5;
-    font-size: 15px;
-    font-family: "Fira Code", monospace;
-    color: #fff;
-    margin: 20px;
+    --MeusProjetos-blendSize: .08em;
+    --MeusProjetos-blendColorA: #77f8;
+    --MeusProjetos-blendColorB: #ff68;
     width: 100%;
+    color: #fff;
+    line-height: 1em;
+    letter-spacing: -.1ch;
+    font-size: 28px;
+    font-weight: bold;
+    font-family: "Fira Code", monospace;
+    margin: 20px;
+    overflow-wrap: break-word;
+    position: relative;
+    word-wrap: break-word;
+    text-align: center; /* Adicione esta linha para centralizar horizontalmente */
+    display: flex;
+    justify-content: center; /* Adicione esta linha para centralizar horizontalmente */
+    align-items: center; /* Adicione esta linha para centralizar verticalmente */
+}
+
+
+.MeusProjetos::after {
+    display: none;
+    content: "";
+    position: absolute;
+    left: 100%;
+    bottom: 0;
+    width: .7ch;
+    height: 1em;
+    margin-left: .35ch;
+    border-radius: 1px;
+    background-color: currentColor;
+    animation: cursorAnim 1s ease infinite;
+}
+
+@keyframes cursorAnim {
+    0% { opacity: .5; }
+    45% { opacity: .5; }
+    55% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+.MeusProjetos-clip {
+    position: relative;
+    display: flex;
+    
+}
+
+.MeusProjetos-clip + .MeusProjetos-clip {
+    position: absolute;
+    top: 0;
+}
+
+.MeusProjetos:not( .MeusProjetos-blended ) .MeusProjetos-clip + .MeusProjetos-clip {
+    display: none;
+}
+
+.MeusProjetos-word {
+    margin: 5px;
+    max-width: 100%;
     align-items: center;
     text-align: center;
-    
-  } 
+    word-wrap: break-word;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Adicione esta linha para centralizar horizontalmente */
+}
+
+.MeusProjetos-blend {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: .5s;
+    transition-property: opacity;
+}
+
+.MeusProjetos-blendA {
+    color: var( --MeusProjetos-blendColorA );
+    margin: calc( var( --MeusProjetos-blendSize ) * -1 ) 0 0 var( --MeusProjetos-blendSize );
+    mix-blend-mode: darken;
+}
+
+.MeusProjetos-blendB {
+    color: var( --MeusProjetos-blendColorB );
+    margin: var( --MeusProjetos-blendSize ) 0 0 calc( var( --MeusProjetos-blendSize ) * -1 );
+    mix-blend-mode: color-burn;
+}
+
+.MeusProjetos-blended .MeusProjetos-blend {
+    opacity: .4;
+}
 
   /* Helpcar */
   .ProjetoHelpCar {
@@ -205,6 +287,7 @@ header {
     align-items: center;
     text-align: center;
   }
+  
 
   .helpcar-image{
     width: 650px;
