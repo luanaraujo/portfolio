@@ -10,11 +10,16 @@ body {
 }
 
 header {
+<<<<<<< HEAD
     order: 1;
 	margin-left: 20px;
 	margin-top: 100px;
     padding-top: 40px;
     width: 100%;
+=======
+	margin: 20px;
+	width: 100%;
+>>>>>>> 4a669c468d9f9e20d4acb754be6783c641faad1e
     display: flex;
 }
 
