@@ -492,20 +492,35 @@ header {
         margin: auto; 
     }
 
+    header {
+        font-size: 15px;
+        font-family: "Fira Code", monospace;
+        color: #fff;
+        margin: 20px;
+        margin-top: 100px;
+        padding-top: 40px;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
     .TextGlitch {
-        font-size: 18px; 
-        max-width: 85%;
+        font-size: 16px; 
+        margin: 20px auto; 
+        max-width: 70%; 
+        line-height: 1.5; 
+        margin-bottom: 10px;
+        padding-left: 20px;
         
     }
 
     .TextGlitch::after {
         display: none; 
+        text-align: center;
     }
 
     
-    header {
-        flex-direction: column; 
-    }
+   
 
     
     .responsive-image {
