@@ -493,34 +493,41 @@ header {
     }
 
     header {
-        font-size: 15px;
-        font-family: "Fira Code", monospace;
-        color: #fff;
-        margin: 20px;
-        margin-top: 100px;
+        order: 1;
         padding-top: 40px;
+        margin: 40px;
         width: 100%;
-        align-items: center;
-        text-align: center;
+        display: flex;
+        justify-content: center; /* Centralize horizontalmente */
+        align-items: center; /* Centralize verticalmente */
     }
 
     .TextGlitch {
-        font-size: 16px; 
-        margin: 20px auto; 
-        max-width: 70%; 
-        line-height: 1.5; 
-        margin-bottom: 10px;
-        padding-left: 20px;
-        
+        --TextGlitch-blendSize: .08em;
+        --TextGlitch-blendColorA: #77f8;
+        --TextGlitch-blendColorB: #ff68;
+        align-items: center; /* Centralize verticalmente */
+        justify-content: center; /* Centralize horizontalmente */
+        position: relative;
+        color: #fff;
+        line-height: 1em;
+        letter-spacing: -.05em; /* Ajuste o espaçamento das letras */
+        font-size: 16px; /* Tamanho da fonte ajustado para telas menores */
+        font-family: "Fira Code", monospace;
+        overflow-wrap: break-word;
     }
 
     .TextGlitch::after {
-        display: none; 
-        text-align: center;
+        display: none;
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: .7ch;
+        height: 1em;
+        border-radius: 1px;
+        background-color: currentColor;
+        animation: cursorAnim 1s ease infinite;
     }
-
-    
-   
 
     
     .responsive-image {
