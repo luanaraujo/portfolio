@@ -327,7 +327,7 @@ class TranslationHandler {
                 portuguese: "Tratador de Assinaturas",
             },
             "assinatura-descricao": {
-                english: "A signature processing program using Python and its libraries: OpenCV, Streamlit, Numpy, Matplotlib and OS. In it is possible to load a image, select a folder and also the level of filtering desired. After that the program converts the image to a grayscale format, apply the binary limiar filter, also a Gaussian smoothing filter and a median filter",
+                english: "A signature processing program using Python and its libraries: OpenCV, Streamlit, Numpy, Matplotlib and OS. In it is possible to load a image, select a folder and also the level of filtering desired. After that the program converts the image to a grayscale format, apply the binary limiar filter, also a Gaussian smoothing filter and a median filter.",
                 portuguese: "Projeto de um programa de tratamento de assinaturas eletrônicas, usando Python e suas bibliotecas: OpenCV, Streamlit, Numpy, Matplotlib e OS. Nele é possível carregar a imagem, selecionar a pasta de destino e então selecionar o nível de filtro desejado. Ao selecionar o valor, o programa converte a imagem para uma escala cinza, aplica o filtro limiar binário, um filtro de suavização Gaussiano e o de mediana.",
             },
             "projects-table": {
