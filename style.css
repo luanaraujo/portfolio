@@ -181,6 +181,7 @@ header {
 	padding: 10px;
   }
 
+  /* Glitch em Projeto*/
   .MeusProjetos {
     order: 5;
     --MeusProjetos-blendSize: .08em;
@@ -197,10 +198,10 @@ header {
     overflow-wrap: break-word;
     position: relative;
     word-wrap: break-word;
-    text-align: center; /* Adicione esta linha para centralizar horizontalmente */
+    text-align: center; 
     display: flex;
-    justify-content: center; /* Adicione esta linha para centralizar horizontalmente */
-    align-items: center; /* Adicione esta linha para centralizar verticalmente */
+    justify-content: center; 
+    align-items: center;
 }
 
 
@@ -248,7 +249,7 @@ header {
     word-wrap: break-word;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Adicione esta linha para centralizar horizontalmente */
+    justify-content: center; 
 }
 
 .MeusProjetos-blend {
