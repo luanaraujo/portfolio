@@ -115,13 +115,13 @@ header {
 .profile-container {
 	order: 2;
     display: flex;
-	max-width: 100%;
 	width: 100%;
 	height: auto;
     justify-content: center; 
-    align-items: center; 
     margin: auto;
     padding-bottom: 20px;
+    align-items: center;
+    text-align: center;
     
 }
 /* Minha foto */	
