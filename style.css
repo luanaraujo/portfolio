@@ -517,6 +517,7 @@ header {
         overflow-wrap: break-word;
         max-width: 90%; /* Defina a largura máxima do elemento */
         text-align: center; /* Centralize o texto horizontalmente */
+        padding-left: 20px;
     }
 
     .TextGlitch::after {
