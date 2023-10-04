@@ -370,7 +370,7 @@ header {
 
 /* Projeto Tabela */
 .ProjetoTabela {
-    order: 7;
+    order: 8;
     font-size: 15px;
     font-family: "Fira Code", monospace;
     color: #fff;
@@ -408,9 +408,9 @@ header {
     border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Projeto Tabela */
+/* Projeto Cardapio */
 .ProjetoCardapio {
-    order: 7;
+    order: 9;
     font-size: 15px;
     font-family: "Fira Code", monospace;
     color: #fff;
@@ -444,6 +444,46 @@ header {
 }
 
 .cardapio-icon:hover {
+    color: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Projeto Devlinks */
+.ProjetoDevlinks {
+    order: 10;
+    font-size: 15px;
+    font-family: "Fira Code", monospace;
+    color: #fff;
+    margin: 20px;
+    padding-top: 20px;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+
+.projeto-link-texto {
+    font-size: 15px; 
+    margin: 0 auto; 
+    max-width: 70%; 
+    line-height: 1.5; 
+    margin-bottom: 10px;
+}
+
+.devlinks-image {
+    width: 650px;
+    margin: 20px;
+}
+
+.links-icon {
+    font-size: 30px;
+    color: #fff;
+    margin-top: 10px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    padding: 5px;
+}
+
+.links-icon:hover {
     color: rgba(255, 255, 255, 0.2);
     border: 2px solid rgba(255, 255, 255, 0.2);
 }

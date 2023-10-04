@@ -336,6 +336,14 @@ class TranslationHandler {
                 english: "A personal project for a simple digital menu prototype using Java Spring, Spring MVC, React, TypeScript, and PostgreSQL. For the fronted, I used the following tecnologies: React, TypeScript, and React Query. This menu allows the user to include new products and delete the existing ones. In my Linkedin profile I uploaded a video showing the program.",
                 portuguese: "Projeto pessoal de um simples protótipo de cardápio digital utilizando as seguintes tecnologias no backend: Java Spring e Spring MVC para criação do servidor, Spring Data JPA para manipulação e persistência de dados, Lombok e o banco de dados PostgreSQL. No frontend foram utilizadas as tecnologias: React, Typescript e React Query. Esse cardápio permite incluir novos produtos e fazer a exclusão do cardápio. No meu Linkedin eu postei um vídeo mostrando o funcionamento.",
             },
+            "projects-links":{
+                english: "DevLinks - Luan Araujo",
+                portuguese: "DevLinks - Luan Araujo",
+            },
+            "links-description":{
+                english: "Project carried out to complete the exclusive and free program, Discover, promoted by Rocketseat for teaching web technologies.",
+                portuguese:"Prjeto realizado para concluir o programa exclusivo e gratuito, Discover, promovido pela Rocketseat para ensino de tecnologias WEB.",
+            }
             // Adicione mais chaves de tradução conforme necessário
         };
         
@@ -389,6 +397,14 @@ const elMenuDesc = document.querySelector("#cardapio p");
 const elMenuDescTranslator = new TranslationHandler(elMenuDesc, "menu-description", translations);
 elMenuDescTranslator.enable();
 
+const elLink = document.querySelector("#devlinks h3");
+const elLinkTranslator = new TranslationHandler(elLink, "projects-links", translations);
+elLinkTranslator.enable();
+
+const elLinkDesc = document.querySelector("#devlinks p");
+const elLinkDescTranslator = new TranslationHandler(elLinkDesc, "links-description", translations);
+elLinkDescTranslator.enable();
+
 const glitchTitle = new TextGlitch(elTitle);
 const glitchProjetos = new MeusProjetos(elProjetos);
 
@@ -411,6 +427,8 @@ englishButton.addEventListener("click", function () {
     elTableDescTranslator.setLanguage("english");
     elMenuTranslator.setLanguage("english");
     elMenuDescTranslator.setLanguage("english");
+    elLinkTranslator.setLanguage("english");
+    elLinkDescTranslator.setLanguage("english");
 });
 
 portugueseButton.addEventListener("click", function () {
@@ -428,4 +446,6 @@ portugueseButton.addEventListener("click", function () {
     elTableDescTranslator.setLanguage("portuguese");
     elMenuTranslator.setLanguage("portuguese");
     elMenuDescTranslator.setLanguage("portuguese");
+    elLinkTranslator.setLanguage("portuguese");
+    elLinkDescTranslator.setLanguage("portuguese");
 });
