@@ -1,6 +1,5 @@
-
 class TextGlitch {
-    
+
     constructor(root) {
         this._root = root;
         this._elClips = root.querySelectorAll(".TextGlitch-clip");
@@ -10,7 +9,7 @@ class TextGlitch {
         this._frameId = null;
         this._text = "";
         this._textAlt = [];
-        this._language = "portuguese"; // Adicione uma variável de idioma inicial
+        this._language = "portuguese";
         Object.seal(this);
 
         this.setTexts([
@@ -20,13 +19,6 @@ class TextGlitch {
             "¨µ31)* {&13Nb? #y1 n2m4 1a 3ua1 +L0 p0rt1f1o!@",
             "§#+:|* {&><@$? {&13Nb?i0it 3n d2@ L5u@ Ar@2jo$*",
         ]);
-
-        // this.setTexts( [
-        // 	"hello world !",
-        // 	"HELLO WORLD ?",
-        // 	"µ3770 3027q ?",
-        // 	"µ311p MQ51b ?",
-        // ] );
     }
 
     on() {
@@ -44,7 +36,7 @@ class TextGlitch {
     setTexts([text, ...alt]) {
         this._text = text;
         this._textAlt = alt;
-        this._updateText(); 
+        this._updateText();
     }
 
     _frame() {
@@ -61,7 +53,7 @@ class TextGlitch {
 
     _unglitch() {
         this._removeClipCSS();
-        this._updateText(); 
+        this._updateText();
         this._root.classList.remove("TextGlitch-blended");
     }
 
@@ -92,7 +84,6 @@ class TextGlitch {
 
         for (let i = 0; i < 12; ++i) {
             const ind = this._randInt(this._text.length);
-
             txt[ind] = this._textAlt[this._randInt(this._textAlt.length)][ind];
         }
         return txt.join("");
@@ -106,33 +97,27 @@ class TextGlitch {
         return (Math.random() * n) | 0;
     }
 
-   // Função para atualizar o texto com base no idioma selecionado
-   _updateText() {
+    _updateText() {
+        const translations = {
+            "hello-friend": {
+                english: "$Hello friend! My name is Luan Araujo and this is my portfolio.",
+                portuguese: "$Olá amigo(a)! Meu nome é Luan Araujo e este é o meu portfólio."
+            },
+        };
 
-    // Crie um objeto de tradução que mapeia chaves de tradução para os textos correspondentes em diferentes idiomas
-    const translations = {
-        "hello-friend": {
-            english: "$Hello friend! My name is Luan Araujo and this is my portfolio.",
-            portuguese: "$Olá amigo(a)! Meu nome é Luan Araujo e este é o meu portfólio."
-        },
-        
-    };
+        const translationKey = "hello-friend";
+        if (this._language === "english") {
+            this._text = translations[translationKey].english;
+        } else if (this._language === "portuguese") {
+            this._text = translations[translationKey].portuguese;
+        }
 
-    // Atualize o texto com base no idioma selecionado e na chave de tradução
-    const translationKey = "hello-friend"; // Use a chave de tradução correspondente ao elemento que você deseja traduzir
-    if (this._language === "english") {
-        this._text = translations[translationKey].english;
-    } else if (this._language === "portuguese") {
-        this._text = translations[translationKey].portuguese;
+        this._textContent(this._text);
     }
-    
-
-    this._textContent(this._text); // Atualize o texto
-}
 }
 
 class MeusProjetos {
-    
+
     constructor(root) {
         this._root = root;
         this._elClips = root.querySelectorAll(".MeusProjetos-clip");
@@ -142,7 +127,7 @@ class MeusProjetos {
         this._frameId = null;
         this._text = "";
         this._textAlt = [];
-        this._language = "portuguese"; // Adicione uma variável de idioma inicial
+        this._language = "portuguese";
         Object.seal(this);
 
         this.setTexts([
@@ -169,7 +154,7 @@ class MeusProjetos {
     setTexts([text, ...alt]) {
         this._text = text;
         this._textAlt = alt;
-        this._updateText(); 
+        this._updateText();
     }
 
     _frame() {
@@ -186,7 +171,7 @@ class MeusProjetos {
 
     _unglitch() {
         this._removeClipCSS();
-        this._updateText(); 
+        this._updateText();
         this._root.classList.remove("MeusProjetos-blended");
     }
 
@@ -217,7 +202,6 @@ class MeusProjetos {
 
         for (let i = 0; i < 12; ++i) {
             const ind = this._randInt(this._text.length);
-
             txt[ind] = this._textAlt[this._randInt(this._textAlt.length)][ind];
         }
         return txt.join("");
@@ -231,28 +215,23 @@ class MeusProjetos {
         return (Math.random() * n) | 0;
     }
 
-   // Função para atualizar o texto com base no idioma selecionado
-   _updateText() {
-    // Crie um objeto de tradução que mapeia chaves de tradução para os textos correspondentes em diferentes idiomas
-    const translations = {
-        "projects.title": {
-            english: "Projects",
-            portuguese: "Projetos"
-        },
-        // Adicione mais chaves de tradução conforme necessário para outros elementos
-    };
+    _updateText() {
+        const translations = {
+            "projects.title": {
+                english: "Projects",
+                portuguese: "Projetos"
+            },
+        };
 
-    // Atualize o texto com base no idioma selecionado e na chave de tradução
-    const translationKey = "projects.title"; // Use a chave de tradução correspondente ao elemento que você deseja traduzir
-    if (this._language === "english") {
-        this._text = translations[translationKey].english;
-    } else if (this._language === "portuguese") {
-        this._text = translations[translationKey].portuguese;
+        const translationKey = "projects.title";
+        if (this._language === "english") {
+            this._text = translations[translationKey].english;
+        } else if (this._language === "portuguese") {
+            this._text = translations[translationKey].portuguese;
+        }
+
+        this._textContent(this._text);
     }
-    
-
-    this._textContent(this._text); // Atualize o texto
-}
 }
 
 class TranslationHandler {
@@ -260,96 +239,84 @@ class TranslationHandler {
         this._root = root;
         this._translationKey = translationKey;
         this._translations = translations;
-        this._language = "portuguese"; // Idioma inicial (você pode definir como necessário)
+        this._language = "portuguese";
         this._text = "";
         Object.seal(this);
 
-        
         this._updateText();
     }
 
-    // Ative a tradução
     enable() {
-        this._updateText(); // Atualize o texto quando a tradução é ativada
+        this._updateText();
     }
 
-    // Defina o idioma
     setLanguage(language) {
         this._language = language;
-        this._updateText(); // Atualize o texto com base no novo idioma
+        this._updateText();
     }
 
-    // Função para atualizar o texto com base no idioma selecionado
     _updateText() {
         if (this._translations.hasOwnProperty(this._translationKey)) {
             const translationData = this._translations[this._translationKey];
             this._text = translationData[this._language] || "";
         } else {
-            // Se a chave de tradução não for encontrada, defina o texto como vazio ou algum valor padrão
             this._text = "";
         }
 
-        // Atualize o conteúdo do elemento HTML com o novo texto traduzido
         this._root.innerText = this._text;
     }
 }
-        // Crie um objeto de tradução que mapeia chaves de tradução para os textos correspondentes em diferentes idiomas
-  
-        const translations = {
-            "sobre-mim": {
-                english: "I am currently pursuing a degree in Analysis and Systems Development, and I previously completed a four-year program in Computer Science at the University Center Filadélfia - UniFil. I am continuously deepening my knowledge in the field of systems development, always striving for more knowledge, and with a strong desire to put everything into practice. I remain highly motivated to learn whatever is necessary to grow in this field.",
-                portuguese: "Atualmente estou cursando Análise e Desenvolvimento de Sistemas, também cursei Ciência da Computação por 4 anos, no Centro Universitário Filadélfia - UniFil. Estou me aprofundando cada vez mais na área de desenvolvimento de sistemas, sempre buscando mais conhecimento, e com muita vontade de colocar tudo em prática. Sigo com muita disposição para aprender o que for necessário para crescer na área.",
-            },
-            "projects.social": {
-                english: "My social media links!",
-                portuguese: "Minhas redes sociais!",
-            },
-            "helpcar.title": {
-                english: "HelpCar Baterias Website",
-                portuguese: "Site HelpCar Baterias",
-            },
-            "helpcar-description": {
-                english: "A contact website for HelpCar Baterias company, using HTML, CSS, and JavaScript.",
-                portuguese: "Projeto de um site de contato para a empresa HelpCar Baterias, usando HTML, CSS e Javascript",
-            },
-            "projects-assinatura": {
-                english: "Signature Processor",
-                portuguese: "Tratador de Assinaturas",
-            },
-            "assinatura-descricao": {
-                english: "A signature processing program using Python and its libraries: OpenCV, Streamlit, Numpy, Matplotlib and OS. In it is possible to load a image, select a folder and also the level of filtering desired. After that the program converts the image to a grayscale format, apply the binary limiar filter, also a Gaussian smoothing filter and a median filter.",
-                portuguese: "Projeto de um programa de tratamento de assinaturas eletrônicas, usando Python e suas bibliotecas: OpenCV, Streamlit, Numpy, Matplotlib e OS. Nele é possível carregar a imagem, selecionar a pasta de destino e então selecionar o nível de filtro desejado. Ao selecionar o valor, o programa converte a imagem para uma escala cinza, aplica o filtro limiar binário, um filtro de suavização Gaussiano e o de mediana.",
-            },
-            "projects-table": {
-                english: "Table Processor",
-                portuguese: "Tratador de Tabelas",
-            },
-            "table-description": {
-                english: "A program for processing tables of exam values using Python and its libraries: Pandas, Streamlit, Re, Openpyxl, and Base64. In it is possible to load a excel table, select the columns you want to use in the process, and after that, the data is treated into a new table wich is exported into a CSV file.",
-                portuguese: "Projeto de um programa de tratamento de tabelas de valores de exames, usando Python e suas bibliotecas: Pandas, Streamlit, Re, Openpyxl e Base64. Nele é possível carregar a tabela em excel, selecionar as colunas dos códigos de procedimento e valor, que você quer usar no tratamento, que serão adicionadas na tabela base (que está pronta para importação). Após a seleção das colunas, os dados são tratados e salvos em uma nova tabela com base no modelo que o programa usa de base. E então, o programa gera o download da tabela tratada, em csv.",
-            },
-            "projects-menu": {
-                english: "Digital Menu",
-                portuguese: "Cardápio Digital",
-            },
-            "menu-description": {
-                english: "A personal project for a simple digital menu prototype using Java Spring, Spring MVC, React, TypeScript, and PostgreSQL. For the fronted, I used the following tecnologies: React, TypeScript, and React Query. This menu allows the user to include new products and delete the existing ones. In my Linkedin profile I uploaded a video showing the program.",
-                portuguese: "Projeto pessoal de um simples protótipo de cardápio digital utilizando as seguintes tecnologias no backend: Java Spring e Spring MVC para criação do servidor, Spring Data JPA para manipulação e persistência de dados, Lombok e o banco de dados PostgreSQL. No frontend foram utilizadas as tecnologias: React, Typescript e React Query. Esse cardápio permite incluir novos produtos e fazer a exclusão do cardápio. No meu Linkedin eu postei um vídeo mostrando o funcionamento.",
-            },
-            "projects-links":{
-                english: "DevLinks - Luan Araujo",
-                portuguese: "DevLinks - Luan Araujo",
-            },
-            "links-description":{
-                english: "Project carried out to complete the exclusive and free program, Discover, promoted by Rocketseat for teaching web technologies.",
-                portuguese:"Prjeto realizado para concluir o programa exclusivo e gratuito, Discover, promovido pela Rocketseat para ensino de tecnologias WEB.",
-            }
-            // Adicione mais chaves de tradução conforme necessário
-        };
-        
 
-
-
+const translations = {
+    "sobre-mim": {
+        english: "Graduated in Systems Analysis and Development from Centro Universitário Filadélfia - UniFil, I work as a Senior Delphi Developer and Systems Analyst at Infoecia Software. I develop and maintain the Amplus ERP system, handle integrations with external platforms via REST APIs, and work with SQL Server databases. I also have complementary knowledge in Java, Spring Boot, React, JavaScript, and Python, applied in personal projects. Analytical, proactive, and always looking for efficient solutions.",
+        portuguese: "Formado em Análise e Desenvolvimento de Sistemas pelo Centro Universitário Filadélfia - UniFil, atuo como Desenvolvedor Delphi Pleno e Analista de Sistemas na Infoecia Software. Trabalho no desenvolvimento e manutenção do sistema ERP Amplus, realizando integrações com plataformas externas via APIs REST e manipulação de dados em SQL Server. Possuo conhecimentos complementares em Java, Spring Boot, React, JavaScript e Python, aplicados em projetos pessoais. Perfil analítico, proativo e sempre em busca de soluções eficientes.",
+    },
+    "projects.social": {
+        english: "My social media links!",
+        portuguese: "Minhas redes sociais!",
+    },
+    "helpcar.title": {
+        english: "HelpCar Baterias Website",
+        portuguese: "Site HelpCar Baterias",
+    },
+    "helpcar-description": {
+        english: "A contact website for HelpCar Baterias company, using HTML, CSS, and JavaScript.",
+        portuguese: "Projeto de um site de contato para a empresa HelpCar Baterias, usando HTML, CSS e Javascript",
+    },
+    "projects-assinatura": {
+        english: "Signature Processor",
+        portuguese: "Tratador de Assinaturas",
+    },
+    "assinatura-descricao": {
+        english: "A signature processing program using Python and its libraries: OpenCV, Streamlit, Numpy, Matplotlib and OS. In it is possible to load a image, select a folder and also the level of filtering desired. After that the program converts the image to a grayscale format, apply the binary limiar filter, also a Gaussian smoothing filter and a median filter.",
+        portuguese: "Projeto de um programa de tratamento de assinaturas eletrônicas, usando Python e suas bibliotecas: OpenCV, Streamlit, Numpy, Matplotlib e OS. Nele é possível carregar a imagem, selecionar a pasta de destino e então selecionar o nível de filtro desejado. Ao selecionar o valor, o programa converte a imagem para uma escala cinza, aplica o filtro limiar binário, um filtro de suavização Gaussiano e o de mediana.",
+    },
+    "projects-table": {
+        english: "Table Processor",
+        portuguese: "Tratador de Tabelas",
+    },
+    "table-description": {
+        english: "A program for processing tables of exam values using Python and its libraries: Pandas, Streamlit, Re, Openpyxl, and Base64. In it is possible to load a excel table, select the columns you want to use in the process, and after that, the data is treated into a new table wich is exported into a CSV file.",
+        portuguese: "Projeto de um programa de tratamento de tabelas de valores de exames, usando Python e suas bibliotecas: Pandas, Streamlit, Re, Openpyxl e Base64. Nele é possível carregar a tabela em excel, selecionar as colunas dos códigos de procedimento e valor, que você quer usar no tratamento, que serão adicionadas na tabela base (que está pronta para importação). Após a seleção das colunas, os dados são tratados e salvos em uma nova tabela com base no modelo que o programa usa de base. E então, o programa gera o download da tabela tratada, em csv.",
+    },
+    "projects-menu": {
+        english: "Digital Menu",
+        portuguese: "Cardápio Digital",
+    },
+    "menu-description": {
+        english: "A personal project for a simple digital menu prototype using Java Spring, Spring MVC, React, TypeScript, and PostgreSQL. For the fronted, I used the following tecnologies: React, TypeScript, and React Query. This menu allows the user to include new products and delete the existing ones. In my Linkedin profile I uploaded a video showing the program.",
+        portuguese: "Projeto pessoal de um simples protótipo de cardápio digital utilizando as seguintes tecnologias no backend: Java Spring e Spring MVC para criação do servidor, Spring Data JPA para manipulação e persistência de dados, Lombok e o banco de dados PostgreSQL. No frontend foram utilizadas as tecnologias: React, Typescript e React Query. Esse cardápio permite incluir novos produtos e fazer a exclusão do cardápio. No meu Linkedin eu postei um vídeo mostrando o funcionamento.",
+    },
+    "projects-links": {
+        english: "DevLinks - Luan Araujo",
+        portuguese: "DevLinks - Luan Araujo",
+    },
+    "links-description": {
+        english: "Project carried out to complete the exclusive and free program, Discover, promoted by Rocketseat for teaching web technologies.",
+        portuguese: "Projeto realizado para concluir o programa exclusivo e gratuito, Discover, promovido pela Rocketseat para ensino de tecnologias WEB.",
+    }
+};
 
 
 const englishButton = document.getElementById("english-button");
@@ -411,7 +378,6 @@ const glitchProjetos = new MeusProjetos(elProjetos);
 glitchTitle.on();
 glitchProjetos.on();
 
-// Adicione eventos de clique para os botões de idioma
 englishButton.addEventListener("click", function () {
     glitchTitle._language = "english";
     glitchTitle._updateText();

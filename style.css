@@ -1,24 +1,27 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     height: 100%;
     display: flex;
-	margin: 0;
-	flex-direction: column;
+    margin: 0;
+    flex-direction: column;
     overflow: hidden;
     background-color: #222;
-	min-height: 100vh; 
-    overflow-y: auto; 
+    min-height: 100vh;
+    overflow-y: auto;
 }
 
 header {
     order: 1;
-	margin-left: 20px;
-	margin-top: 100px;
+    margin-left: 20px;
+    margin-top: 100px;
     padding-top: 40px;
     width: 100%;
     display: flex;
 }
 
-/* Texto com efeito de glitch */	
 .TextGlitch {
     --TextGlitch-blendSize: .08em;
     --TextGlitch-blendColorA: #77f8;
@@ -34,9 +37,7 @@ header {
     font-family: "Fira Code", monospace;
     margin: 20px;
     overflow-wrap: break-word;
-    
 }
-
 
 .TextGlitch::after {
     display: none;
@@ -62,7 +63,6 @@ header {
 
 .TextGlitch-clip {
     position: relative;
-    
     display: flex;
     align-items: baseline;
 }
@@ -78,8 +78,7 @@ header {
 }
 
 .TextGlitch-word {
-    
-    margin: 5px;    
+    margin: 5px;
     max-width: 100%;
     word-wrap: break-word;
     display: flex;
@@ -111,34 +110,31 @@ header {
     opacity: .4;
 }
 
-/* Parte da imagem de perfil */	
 .profile-container {
-	order: 2;
+    order: 2;
     display: flex;
-	width: 100%;
-	height: auto;
-    justify-content: center; 
+    width: 100%;
+    height: auto;
+    justify-content: center;
     margin: auto;
     padding-bottom: 20px;
     align-items: center;
     text-align: center;
-    
 }
-/* Minha foto */	
+
 .profile-image {
     margin-top: 40px;
     width: 160px;
     height: auto;
 }
 
-/* Sobre */	
 .SobreMim {
     order: 3;
     background-color: #222;
     padding: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
-    width: 100%; 
+    width: 100%;
     text-align: center;
     top: 100px;
 }
@@ -149,51 +145,47 @@ header {
     font-family: "Fira Code", monospace;
     color: #fff;
     padding: 10px;
-    margin: 0 auto; /* Margin automática nas laterais para centralizar o conteúdo horizontalmente */
-    max-width: 70%; /* Defina a largura máxima como um valor percentual */
+    margin: 0 auto;
+    max-width: 70%;
     position: relative;
     word-wrap: break-word;
     display: block;
     line-height: 1.5;
 }
 
-#sobre h3{
-	font-size: 18px;
+#sobre h3 {
+    font-size: 18px;
     font-family: "Fira Code", monospace;
-	color: #fff;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 10px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
 }
 
-
 #icones {
-	display: flex;
-	gap: 16px;
-	font-size: 30px;
-	justify-content: center;
-  }
+    display: flex;
+    gap: 16px;
+    font-size: 30px;
+    justify-content: center;
+}
 
- 
-  
-  #icones a {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 10px;
-	color: #fff;
-	transition: background 0.2s;
-	border-radius: 50%;
-  }
-  
-  #icones a:hover {
-	background: rgba(255, 255, 255, 0.2);
-	padding: 10px;
-  }
+#icones a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    color: #fff;
+    transition: background 0.2s;
+    border-radius: 50%;
+}
 
-  /* Glitch em Projeto*/
-  .MeusProjetos {
+#icones a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+}
+
+.MeusProjetos {
     order: 5;
     --MeusProjetos-blendSize: .08em;
     --MeusProjetos-blendColorA: #77f8;
@@ -209,12 +201,11 @@ header {
     overflow-wrap: break-word;
     position: relative;
     word-wrap: break-word;
-    text-align: center; 
+    text-align: center;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
 }
-
 
 .MeusProjetos::after {
     display: none;
@@ -230,17 +221,9 @@ header {
     animation: cursorAnim 1s ease infinite;
 }
 
-@keyframes cursorAnim {
-    0% { opacity: .5; }
-    45% { opacity: .5; }
-    55% { opacity: 0; }
-    100% { opacity: 0; }
-}
-
 .MeusProjetos-clip {
     position: relative;
     display: flex;
-    
 }
 
 .MeusProjetos-clip + .MeusProjetos-clip {
@@ -260,7 +243,7 @@ header {
     word-wrap: break-word;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; 
+    justify-content: center;
 }
 
 .MeusProjetos-blend {
@@ -287,40 +270,37 @@ header {
     opacity: .4;
 }
 
-  /* Helpcar */
-  .ProjetoHelpCar {
+.ProjetoHelpCar {
     order: 6;
     font-size: 15px;
     font-family: "Fira Code", monospace;
     color: #fff;
-    margin: 20px;
-    padding-top: 20px;
-    width: 100%;
+    margin: 20px 0;
+    padding: 20px 20px 0;
     align-items: center;
     text-align: center;
-  }
+}
 
-  .helpcar-texto {
-    font-size: 15px; 
-    margin: 0 auto; 
-    max-width: 70%; 
-    line-height: 1.5; 
+.helpcar-texto {
+    font-size: 15px;
+    margin: 0 auto;
+    max-width: 70%;
+    line-height: 1.5;
     margin-bottom: 10px;
 }
-  
 
-  .helpcar-image{
+.helpcar-image {
     width: 650px;
     margin: 20px;
-  }
+}
 
-  .site-icon {
-    font-size: 30px; 
-    color: #fff; 
-    margin-top: 10px; 
-    border-radius: 50%; 
-    border: 2px solid #fff; 
-    padding: 5px; 
+.site-icon {
+    font-size: 30px;
+    color: #fff;
+    margin-top: 10px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    padding: 5px;
 }
 
 .site-icon:hover {
@@ -328,24 +308,22 @@ header {
     border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Projeto Assinatura */
 .ProjetoAssinatura {
     order: 7;
     font-size: 15px;
     font-family: "Fira Code", monospace;
     color: #fff;
-    margin: 20px;
-    padding-top: 20px;
-    width: 100%;
+    margin: 20px 0;
+    padding: 20px 20px 0;
     align-items: center;
     text-align: center;
 }
 
 .projeto-assinatura-texto {
-    font-size: 15px; 
-    margin: 0 auto; 
-    max-width: 70%; 
-    line-height: 1.5; 
+    font-size: 15px;
+    margin: 0 auto;
+    max-width: 70%;
+    line-height: 1.5;
     margin-bottom: 10px;
 }
 
@@ -368,24 +346,22 @@ header {
     border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Projeto Tabela */
 .ProjetoTabela {
     order: 8;
     font-size: 15px;
     font-family: "Fira Code", monospace;
     color: #fff;
-    margin: 20px;
-    padding-top: 20px;
-    width: 100%;
+    margin: 20px 0;
+    padding: 20px 20px 0;
     align-items: center;
     text-align: center;
 }
 
 .projeto-tabela-texto {
-    font-size: 15px; 
-    margin: 0 auto; 
-    max-width: 70%; 
-    line-height: 1.5; 
+    font-size: 15px;
+    margin: 0 auto;
+    max-width: 70%;
+    line-height: 1.5;
     margin-bottom: 10px;
 }
 
@@ -408,24 +384,22 @@ header {
     border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Projeto Cardapio */
 .ProjetoCardapio {
     order: 9;
     font-size: 15px;
     font-family: "Fira Code", monospace;
     color: #fff;
-    margin: 20px;
-    padding-top: 20px;
-    width: 100%;
+    margin: 20px 0;
+    padding: 20px 20px 0;
     align-items: center;
     text-align: center;
 }
 
 .projeto-cardapio-texto {
-    font-size: 15px; 
-    margin: 0 auto; 
-    max-width: 70%; 
-    line-height: 1.5; 
+    font-size: 15px;
+    margin: 0 auto;
+    max-width: 70%;
+    line-height: 1.5;
     margin-bottom: 10px;
 }
 
@@ -448,24 +422,22 @@ header {
     border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Projeto Devlinks */
 .ProjetoDevlinks {
     order: 10;
     font-size: 15px;
     font-family: "Fira Code", monospace;
     color: #fff;
-    margin: 20px;
-    padding-top: 20px;
-    width: 100%;
+    margin: 20px 0;
+    padding: 20px 20px 0;
     align-items: center;
     text-align: center;
 }
 
 .projeto-link-texto {
-    font-size: 15px; 
-    margin: 0 auto; 
-    max-width: 70%; 
-    line-height: 1.5; 
+    font-size: 15px;
+    margin: 0 auto;
+    max-width: 70%;
+    line-height: 1.5;
     margin-bottom: 10px;
 }
 
@@ -488,9 +460,8 @@ header {
     border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Ajuste o estilo do cabeçalho fixo para telas maiores */
 #fixed-header {
-    position: fixed; /* Mantenha "fixed" para telas maiores */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -498,12 +469,12 @@ header {
     background: linear-gradient(rgb(94, 94, 94), #222);
     padding: 10px;
     display: flex;
-    justify-content: space-between; 
-    align-items: center; 
+    justify-content: space-between;
+    align-items: center;
 }
 
 #fixed-header .language-selector {
-    display: flex; 
+    display: flex;
     align-items: center;
 }
 
@@ -514,7 +485,7 @@ header {
     cursor: pointer;
     font-size: 18px;
     margin-right: 10px;
-    padding: 0; 
+    padding: 0;
 }
 
 #fixed-header .language-selector button img {
@@ -526,10 +497,10 @@ header {
 #fixed-header .language-selector button:hover img {
     opacity: 0.8;
 }
-/* Adicione esta regra de mídia para telas pequenas (por exemplo, smartphones) */
+
 @media (max-width: 768px) {
     body {
-        margin: auto; 
+        margin: auto;
     }
 
     header {
@@ -538,25 +509,25 @@ header {
         margin: 40px;
         width: 100%;
         display: flex;
-        justify-content: center; /* Centralize horizontalmente */
-        align-items: center; /* Centralize verticalmente */
+        justify-content: center;
+        align-items: center;
     }
 
     .TextGlitch {
         --TextGlitch-blendSize: .08em;
         --TextGlitch-blendColorA: #77f8;
         --TextGlitch-blendColorB: #ff68;
-        align-items: center; /* Centralize verticalmente */
-        justify-content: center; /* Centralize horizontalmente */
+        align-items: center;
+        justify-content: center;
         position: relative;
         color: #fff;
         line-height: 1em;
-        letter-spacing: -.05em; /* Ajuste o espaçamento das letras */
-        font-size: 16px; /* Tamanho da fonte ajustado para telas menores */
+        letter-spacing: -.05em;
+        font-size: 16px;
         font-family: "Fira Code", monospace;
         overflow-wrap: break-word;
-        max-width: 90%; /* Defina a largura máxima do elemento */
-        text-align: center; /* Centralize o texto horizontalmente */
+        max-width: 90%;
+        text-align: center;
         padding-left: 20px;
     }
 
@@ -572,55 +543,42 @@ header {
         animation: cursorAnim 1s ease infinite;
     }
 
-    
     .responsive-image {
-        max-width: 80%; 
-        display: block; 
-        margin: 0 auto; 
+        max-width: 80%;
+        display: block;
+        margin: 0 auto;
     }
-    
+
     .profile-container {
-        justify-content: center; /* Centralize horizontalmente o conteúdo do .profile-container */
+        justify-content: center;
     }
+
     .profile-image {
-        width: 120px; 
-        padding-left: 20px;
-        
+        width: 120px;
     }
 
-    
+    #sobre p {
+        max-width: 90%;
+    }
+
+    .helpcar-texto,
+    .projeto-assinatura-texto,
+    .projeto-tabela-texto,
+    .projeto-cardapio-texto,
+    .projeto-link-texto {
+        max-width: 90%;
+    }
+
     #sobre {
-        font-size: 16px; 
+        font-size: 16px;
     }
 
-    
     #fixed-header {
-        padding-right: 10px; 
+        padding-right: 10px;
     }
 
-    
     #fixed-header .language-selector {
-        overflow-x: auto; 
-        white-space: nowrap; 
+        overflow-x: auto;
+        white-space: nowrap;
     }
 }
-    #fixed-header .language-selector button {
-        background: transparent;
-        position: relative;
-        border: none;
-        cursor: pointer;
-        font-size: 18px;
-        margin-right: 10px;
-        padding: 0; 
-    }
-
-    #fixed-header .language-selector button img {
-        width: 25px;
-        height: 25px;
-        color: currentColor;
-    }
-
-    #fixed-header .language-selector button:hover img {
-        opacity: 0.8;
-    }
-
